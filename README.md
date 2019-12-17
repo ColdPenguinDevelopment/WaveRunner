@@ -1,5 +1,5 @@
 # WaveRunner
 Allows for local playing of audio files using a simple interface.
 
-![WaveRunner Screenshot](screenshot.png)
+![WaveRunner Screen shot](Screenshot.png)
 
