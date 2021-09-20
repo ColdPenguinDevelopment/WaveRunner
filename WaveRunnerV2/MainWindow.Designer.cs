@@ -30,9 +30,9 @@ namespace WaveRunnerV2
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,7 +69,7 @@ namespace WaveRunnerV2
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(877, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1092, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -115,13 +115,13 @@ namespace WaveRunnerV2
             this.pnlAudioControls.Location = new System.Drawing.Point(0, 612);
             this.pnlAudioControls.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAudioControls.Name = "pnlAudioControls";
-            this.pnlAudioControls.Size = new System.Drawing.Size(877, 111);
+            this.pnlAudioControls.Size = new System.Drawing.Size(1092, 111);
             this.pnlAudioControls.TabIndex = 1;
             // 
             // btnFade
             // 
             this.btnFade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFade.Location = new System.Drawing.Point(309, 15);
+            this.btnFade.Location = new System.Drawing.Point(524, 15);
             this.btnFade.Name = "btnFade";
             this.btnFade.Size = new System.Drawing.Size(129, 28);
             this.btnFade.TabIndex = 1;
@@ -136,7 +136,7 @@ namespace WaveRunnerV2
             this.mpLayer.Location = new System.Drawing.Point(0, 49);
             this.mpLayer.Name = "mpLayer";
             this.mpLayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mpLayer.OcxState")));
-            this.mpLayer.Size = new System.Drawing.Size(877, 62);
+            this.mpLayer.Size = new System.Drawing.Size(1092, 62);
             this.mpLayer.TabIndex = 0;
             // 
             // splitContainer1
@@ -144,7 +144,8 @@ namespace WaveRunnerV2
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer1.BackColor = System.Drawing.Color.Black;
+            this.splitContainer1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.splitContainer1.Location = new System.Drawing.Point(0, 25);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
@@ -161,8 +162,8 @@ namespace WaveRunnerV2
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Black;
             this.splitContainer1.Panel2.Controls.Add(this.dgvMusic);
             this.splitContainer1.Panel2MinSize = 150;
-            this.splitContainer1.Size = new System.Drawing.Size(877, 594);
-            this.splitContainer1.SplitterDistance = 300;
+            this.splitContainer1.Size = new System.Drawing.Size(1092, 594);
+            this.splitContainer1.SplitterDistance = 373;
             this.splitContainer1.SplitterWidth = 7;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -172,7 +173,7 @@ namespace WaveRunnerV2
             this.flpAudio.Location = new System.Drawing.Point(11, 11);
             this.flpAudio.Margin = new System.Windows.Forms.Padding(4);
             this.flpAudio.Name = "flpAudio";
-            this.flpAudio.Size = new System.Drawing.Size(274, 568);
+            this.flpAudio.Size = new System.Drawing.Size(351, 572);
             this.flpAudio.TabIndex = 1;
             // 
             // dgvMusic
@@ -183,44 +184,44 @@ namespace WaveRunnerV2
             this.dgvMusic.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvMusic.BackgroundColor = System.Drawing.Color.Black;
             this.dgvMusic.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMusic.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMusic.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvMusic.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMusic.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SortOrder,
             this.Title,
             this.Duration});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMusic.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMusic.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvMusic.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMusic.Location = new System.Drawing.Point(0, 0);
             this.dgvMusic.Name = "dgvMusic";
             this.dgvMusic.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMusic.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMusic.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvMusic.RowHeadersVisible = false;
             this.dgvMusic.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMusic.Size = new System.Drawing.Size(566, 590);
+            this.dgvMusic.Size = new System.Drawing.Size(712, 594);
             this.dgvMusic.TabIndex = 0;
             this.dgvMusic.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMusic_CellMouseClick);
             this.dgvMusic.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMusic_CellMouseDoubleClick);
@@ -263,7 +264,7 @@ namespace WaveRunnerV2
             // btnFadeFast
             // 
             this.btnFadeFast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFadeFast.Location = new System.Drawing.Point(444, 15);
+            this.btnFadeFast.Location = new System.Drawing.Point(659, 15);
             this.btnFadeFast.Name = "btnFadeFast";
             this.btnFadeFast.Size = new System.Drawing.Size(209, 28);
             this.btnFadeFast.TabIndex = 2;
@@ -274,7 +275,7 @@ namespace WaveRunnerV2
             // btnFadeSlow
             // 
             this.btnFadeSlow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFadeSlow.Location = new System.Drawing.Point(656, 15);
+            this.btnFadeSlow.Location = new System.Drawing.Point(871, 15);
             this.btnFadeSlow.Name = "btnFadeSlow";
             this.btnFadeSlow.Size = new System.Drawing.Size(209, 28);
             this.btnFadeSlow.TabIndex = 3;
@@ -286,7 +287,7 @@ namespace WaveRunnerV2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 723);
+            this.ClientSize = new System.Drawing.Size(1092, 723);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.pnlAudioControls);
             this.Controls.Add(this.menuStrip1);

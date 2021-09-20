@@ -22,6 +22,7 @@ namespace WaveRunnerV2.Modals
             InitializeComponent();
             Model = model;
             ConfigPath = configPath;
+            flpAudio.AllowDrop = true;
         }
 
         private void btnImport_Click(object sender, EventArgs e)
@@ -75,13 +76,18 @@ namespace WaveRunnerV2.Modals
             {
                 Invoke(new Action(() =>
                 {
-                    flpAudio.Controls.Add(new Button
+                    var newButton = new Button
                     {
                         Text = file.NickName,
                         Width = 175,
                         Height = 100,
-                        ContextMenuStrip = cmsContext
-                    });
+                        ContextMenuStrip = cmsContext,
+                        AllowDrop = true,
+                    };
+                    newButton.MouseDown += NewButton_MouseDown;
+                    newButton.DragOver += NewButton_DragOver;
+
+                    flpAudio.Controls.Add(newButton);
                     Refresh();
                 }));
 
@@ -91,6 +97,41 @@ namespace WaveRunnerV2.Modals
 
             statusLabel.Text = "Ready";
         }
+
+        private void NewButton_DragOver(object sender, DragEventArgs e)
+        {
+            base.OnDragOver(e);
+            // is another dragable
+            if (e.Data.GetData(typeof(Button)) != null)
+            {
+                FlowLayoutPanel p = (FlowLayoutPanel)(sender as Button).Parent;
+                //Current Position             
+                int myIndex = p.Controls.GetChildIndex((sender as Button));
+
+                //Dragged to control to location of next picturebox
+                Button q = (Button)e.Data.GetData(typeof(Button));
+                p.Controls.SetChildIndex(q, myIndex);
+            }
+
+        }
+
+        private void NewButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.OnMouseDown(e);
+            DoDragDrop(sender, DragDropEffects.All);
+
+            int i = 1;
+
+            foreach (var item in flpAudio.Controls)
+            {
+                var thisItem = Model.AudioClips.FirstOrDefault(d => d.NickName == (item as Button).Text);
+                thisItem.SortOrder = i;
+                i++;
+            }
+
+            Model.SaveChanges(ConfigPath);
+        }
+
 
         private void ctxRename_Click(object sender, EventArgs e)
         {

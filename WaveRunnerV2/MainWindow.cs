@@ -43,6 +43,15 @@ namespace WaveRunnerV2
             mPlayer.BeginInit();
             mPlayer.EndInit();
             mPlayer.Ctlenabled = true;
+
+
+            dgvMusic.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
+            dgvMusic.ColumnHeadersDefaultCellStyle.ForeColor = Color.WhiteSmoke;
+            dgvMusic.ColumnHeadersDefaultCellStyle.Padding = new Padding(10);
+            dgvMusic.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+
+            dgvMusic.GridColor = Color.Black;
+            dgvMusic.EnableHeadersVisualStyles = false;
         }
 
         private void fadeOutTimer(object sender, EventArgs e)
@@ -63,6 +72,9 @@ namespace WaveRunnerV2
 
         private void MainWindow_Shown(object sender, EventArgs e)
         {
+            flpAudio.Controls.Clear();
+            dgvMusic.Rows.Clear();
+
             Thread thread1 = new Thread(LoadAudio);
             Thread thread2 = new Thread(LoadMusic);
             thread1.Start();
@@ -88,9 +100,16 @@ namespace WaveRunnerV2
                     var audioButton = new Button
                     {
                         Text = file.NickName + Environment.NewLine + minutes + ":" + secondDisplay,
-                        Width = 175,
+                        Width = (flpAudio.Width - 20) / 3,
                         Height = 100,
+                        Tag = file.NickName,
+                        FlatStyle = System.Windows.Forms.FlatStyle.Flat,
+                        ForeColor = Color.WhiteSmoke,
+                        BackColor = Color.FromArgb(32, 32, 32)
                     };
+
+                    audioButton.FlatAppearance.BorderSize = 0;
+                    audioButton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
 
                     audioButton.Click += PlayAudio_Click;
 
@@ -103,7 +122,6 @@ namespace WaveRunnerV2
 
         private void LoadMusic()
         {
-            dgvMusic.Rows.Clear();
 
             foreach (var file in Model.Music.OrderBy(d => d.SortOrder))
             {
@@ -151,7 +169,7 @@ namespace WaveRunnerV2
         private void PlayAudio_Click(object sender, EventArgs e)
         {
             var button = sender as Button;
-            var selectedAudio = Model.AudioClips.FirstOrDefault(d => d.NickName == button.Text);
+            var selectedAudio = Model.AudioClips.FirstOrDefault(d => d.NickName == button.Tag.ToString());
 
             mPlayer.URL = selectedAudio.FileName;
             mPlayer.Ctlcontrols.play();
@@ -201,8 +219,8 @@ namespace WaveRunnerV2
             mac.ShowDialog(this);
 
             flpAudio.Controls.Clear();
-            Thread thread1 = new Thread(LoadAudio);
-            thread1.Start();
+
+            MainWindow_Shown(null, null);
         }
 
         private void btnFade_Click(object sender, EventArgs e)
@@ -220,8 +238,7 @@ namespace WaveRunnerV2
             mac.ShowDialog(this);
 
             flpAudio.Controls.Clear();
-            Thread thread1 = new Thread(LoadAudio);
-            thread1.Start();
+            MainWindow_Shown(null, null);
         }
         string prevText = "";
 
